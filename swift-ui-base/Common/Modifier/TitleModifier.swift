@@ -9,23 +9,23 @@
 import SwiftUI
 
 struct MainTitle: ViewModifier {
-  func body(content: Content) -> some View {
-    content
-      .padding()
-      .foregroundColor(.darkGray)
-      .font(.largeTitle)
-  }
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .foregroundColor(.darkGray)
+            .font(.largeTitle)
+    }
 }
 
 struct MainTitle_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      Text("Hello, World!")
-        .previewLayout(.sizeThatFits)
-      
-      Text("Hello, World!")
-        .modifier(MainTitle())
-        .previewLayout(.sizeThatFits)
+    static var previews: some View {
+        Group {
+            Text("Hello, World!")
+                .previewLayout(.sizeThatFits)
+            
+            Text("Hello, World!")
+                .modifier(MainTitle())
+                .previewLayout(.sizeThatFits)
+        }
     }
-  }
 }

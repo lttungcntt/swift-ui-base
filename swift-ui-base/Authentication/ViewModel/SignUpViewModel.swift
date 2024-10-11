@@ -10,61 +10,61 @@ import Foundation
 import UIKit
 
 class SignUpViewModel: ObservableObject, Identifiable {
-  @Published var emailData = TextFieldData(
-    title: "Email",
-    validationType: .email,
-    errorMessage: "Please enter a valid email"
-  )
-  
-  @Published var passwordData = TextFieldData(
-    title: "Password",
-    validationType: .nonEmpty,
-    isSecure: true,
-    errorMessage: "Passwords don't match"
-  )
-  
-  @Published var confirmPasswordData = TextFieldData(
-    title: "Confirm Password",
-    validationType: .nonEmpty,
-    isSecure: true,
-    errorMessage: "Passwords don't match"
-  )
-  
-  @Published var isLoading = false
-  @Published var errored = false
-  var error: String = ""
-  
-  init() {
-    confirmPasswordData.validationType = .custom(isValid: passwordsMatch)
-    passwordData.validationType = .custom(isValid: passwordsMatch)
-  }
-  
-  var isValidData: Bool {
-    return [emailData, passwordData, confirmPasswordData].allSatisfy { $0.isValid }
-  }
-  
-  func passwordsMatch() -> Bool {
-    guard !passwordData.isEmpty else { return false }
-    let areValidPasswords = passwordData.value == confirmPasswordData.value
-    passwordData.isValid = areValidPasswords
-    confirmPasswordData.isValid = areValidPasswords
-    return areValidPasswords
-  }
-  
-  func attemptSingUp() {
-    isLoading = true
-    AuthenticationServices.signup(
-      emailData.value,
-      password: passwordData.value,
-      avatar64: UIImage.random(),
-      success: { [weak self] _ in
-        self?.isLoading = false
-        ViewRouter.shared.currentRoot = .profile
-      },
-      failure: { [weak self] error in
-        self?.isLoading = false
-        self?.errored = true
-        self?.error = error.localizedDescription
-    })
-  }
+    @Published var emailData = TextFieldData(
+        title: "Email",
+        validationType: .email,
+        errorMessage: "Please enter a valid email"
+    )
+    
+    @Published var passwordData = TextFieldData(
+        title: "Password",
+        validationType: .nonEmpty,
+        isSecure: true,
+        errorMessage: "Passwords don't match"
+    )
+    
+    @Published var confirmPasswordData = TextFieldData(
+        title: "Confirm Password",
+        validationType: .nonEmpty,
+        isSecure: true,
+        errorMessage: "Passwords don't match"
+    )
+    
+    @Published var isLoading = false
+    @Published var errored = false
+    var error: String = ""
+    
+    init() {
+        confirmPasswordData.validationType = .custom(isValid: passwordsMatch)
+        passwordData.validationType = .custom(isValid: passwordsMatch)
+    }
+    
+    var isValidData: Bool {
+        return [emailData, passwordData, confirmPasswordData].allSatisfy { $0.isValid }
+    }
+    
+    func passwordsMatch() -> Bool {
+        guard !passwordData.isEmpty else { return false }
+        let areValidPasswords = passwordData.value == confirmPasswordData.value
+        passwordData.isValid = areValidPasswords
+        confirmPasswordData.isValid = areValidPasswords
+        return areValidPasswords
+    }
+    
+    func attemptSingUp() {
+        isLoading = true
+        AuthenticationServices.signup(
+            emailData.value,
+            password: passwordData.value,
+            avatar64: UIImage.random(),
+            success: { [weak self] _ in
+                self?.isLoading = false
+                ViewRouter.shared.currentRoot = .profile
+            },
+            failure: { [weak self] error in
+                self?.isLoading = false
+                self?.errored = true
+                self?.error = error.localizedDescription
+            })
+    }
 }

@@ -9,23 +9,23 @@
 import SwiftUI
 
 struct RootView: View {
-  
-  @EnvironmentObject var router: ViewRouter
-  
-  var body: some View {
-    VStack {
-      containedView()
-        .id(router.currentRoot)
-        .transition(.slide).animation(.linear(duration: 0.2))
+    
+    @EnvironmentObject var router: ViewRouter
+    
+    var body: some View {
+        VStack {
+            containedView()
+                .id(router.currentRoot)
+                .transition(.slide).animation(.linear(duration: 0.2))
+        }
     }
-  }
-  
-  func containedView() -> AnyView {
-    switch router.currentRoot {
-    case .profile:
-      return AnyView(ProfileView())
-    default:
-      return AnyView(HomeView())
+    
+    func containedView() -> AnyView {
+        switch router.currentRoot {
+        case .profile:
+            return AnyView(ProfileView())
+        default:
+            return AnyView(HomeView())
+        }
     }
-  }
 }
