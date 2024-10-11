@@ -22,5 +22,6 @@ class Storage {
 
 enum AppKeys: String {
     case
-    isLogin
+    isLogin,
+    Env
 }

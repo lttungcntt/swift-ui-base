@@ -1,5 +1,5 @@
 {
-  "originHash" : "7fe5360f70ed0904f0bc9de9108d67e097b038013e0b0a3b7c1a034504b70860",
+  "originHash" : "fb1db3eed6ba582b448c0f3fed99a1654c251c9c36f2b3019d6c5a68a6df4b8a",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
         "version" : "5.9.1"
+      }
+    },
+    {
+      "identity" : "rainbow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Rainbow.git",
+      "state" : {
+        "revision" : "e0dada9cd44e3fa7ec3b867e49a8ddbf543e3df3",
+        "version" : "4.0.1"
       }
     },
     {

@@ -1,0 +1,17 @@
+//
+//  DEV.xcconfig
+//  iLight
+//
+//  Created by Tyler on 30/10/2019.
+//  Copyright © 2019 Legato. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+ENVIRONMENT = DEV
+PRODUCT_BUNDLE_IDENTIFIER = tyler.dev.name
+APP_NAME = APP(DEV)
+API_URL = https://www.apple.com/dev
+
+//GOOGLE_SERVICE_INFO_NAME = GoogleService-Info-DEV
