@@ -2,7 +2,7 @@
 //  NetworkMocker.swift
 //  swift-ui-baseUITests
 //
-//  Created by Germán Stábile on 6/30/20.
+//  Created by Tyler iOS on 6/30/20.
 //  Copyright © 2020 Rootstrap. All rights reserved.
 //
 

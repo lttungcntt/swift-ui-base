@@ -2,7 +2,7 @@
 //  SignUpViewModel.swift
 //  swift-ui-base
 //
-//  Created by Germán Stábile on 4/3/20.
+//  Created by Tyler iOS on 4/3/20.
 //  Copyright © 2020 Rootstrap. All rights reserved.
 //
 

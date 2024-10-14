@@ -2,7 +2,7 @@
 //  XCUIApplicationExtension.swift
 //  swift-ui-baseUITests
 //
-//  Created by Germán Stábile on 2/13/20.
+//  Created by Tyler iOS on 2/13/20.
 //  Copyright © 2020 Rootstrap. All rights reserved.
 //
 

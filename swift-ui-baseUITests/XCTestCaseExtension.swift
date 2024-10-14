@@ -2,7 +2,7 @@
 //  XCTestCaseExtension.swift
 //  swift-ui-baseUITests
 //
-//  Created by Germán Stábile on 2/13/20.
+//  Created by Tyler iOS on 2/13/20.
 //  Copyright © 2020 TopTier labs. All rights reserved.
 //
 
