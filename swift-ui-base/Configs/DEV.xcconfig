@@ -12,6 +12,6 @@
 ENVIRONMENT = DEV
 PRODUCT_BUNDLE_IDENTIFIER = tyler.dev.name
 APP_NAME = APP(DEV)
-API_URL = https://www.apple.com/dev
+API_URL = https/$()/www.apple.com/dev
 
 //GOOGLE_SERVICE_INFO_NAME = GoogleService-Info-DEV

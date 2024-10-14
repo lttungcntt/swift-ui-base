@@ -11,7 +11,8 @@ import Foundation
 private enum ConfigKey: String {
     case
     ENVIRONMENT,
-    API_URL
+    API_URL,
+    APP_NAME
 }
 
 enum AppEnv: String, Codable, CaseIterable {
@@ -29,15 +30,9 @@ enum AppEnv: String, Codable, CaseIterable {
         return result
     }
     
-    static var current: AppEnv {
-        get {
-            return AppEnv(rawValue: AppEnv[.ENVIRONMENT]) ?? .DEV
-        }
-    }
+    static var current: AppEnv { get { return AppEnv(rawValue: AppEnv[.ENVIRONMENT]) ?? .DEV } }
     
-    static var apiUrl: String {
-        get {
-            return AppEnv[.API_URL]
-        }
-    }
+    static var apiUrl: String { get { return AppEnv[.API_URL] } }
+    
+    static var appName: String { get { return AppEnv[.APP_NAME] } }
 }

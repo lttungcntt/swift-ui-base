@@ -51,8 +51,8 @@
 		2FFE290C2CB90255002C1823 /* UAT.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE29042CB90255002C1823 /* UAT.xcconfig */; };
 		2FFE290D2CB90255002C1823 /* PRG.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE29032CB90255002C1823 /* PRG.xcconfig */; };
 		2FFE291F2CB90796002C1823 /* AppEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE291E2CB90791002C1823 /* AppEnv.swift */; };
-		2FFE29222CB90E75002C1823 /* Rainbow in Frameworks */ = {isa = PBXBuildFile; productRef = 2FFE29212CB90E75002C1823 /* Rainbow */; };
-		2FFE29242CB90EB0002C1823 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE29232CB90EAE002C1823 /* Logger.swift */; };
+		2FFE29242CB90EB0002C1823 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE29232CB90EAE002C1823 /* Log.swift */; };
+		385F96992CB929B20053918A /* SwiftLogConsoleColors in Frameworks */ = {isa = PBXBuildFile; productRef = 385F96982CB929B20053918A /* SwiftLogConsoleColors */; };
 		6E032E0D24D347FC00952748 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E032E0C24D347FC00952748 /* ConfigurationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -117,7 +117,7 @@
 		2FFE29032CB90255002C1823 /* PRG.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PRG.xcconfig; sourceTree = "<group>"; };
 		2FFE29042CB90255002C1823 /* UAT.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UAT.xcconfig; sourceTree = "<group>"; };
 		2FFE291E2CB90791002C1823 /* AppEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnv.swift; sourceTree = "<group>"; };
-		2FFE29232CB90EAE002C1823 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		2FFE29232CB90EAE002C1823 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		6E032E0C24D347FC00952748 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FFE28F22CB8E260002C1823 /* Alamofire in Frameworks */,
-				2FFE29222CB90E75002C1823 /* Rainbow in Frameworks */,
+				385F96992CB929B20053918A /* SwiftLogConsoleColors in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +463,7 @@
 		2FFE28F82CB8FDC3002C1823 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2FFE29232CB90EAE002C1823 /* Logger.swift */,
+				2FFE29232CB90EAE002C1823 /* Log.swift */,
 				2FFE291E2CB90791002C1823 /* AppEnv.swift */,
 				2FFE28FB2CB8FE1B002C1823 /* Constant.swift */,
 				2FFE28F92CB8FDD4002C1823 /* Storage.swift */,
@@ -531,7 +531,7 @@
 				2FFE28EE2CB8DFF9002C1823 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2FFE28EF2CB8E066002C1823 /* XCRemoteSwiftPackageReference "swifter" */,
 				2FFE28F32CB8E5D9002C1823 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
-				2FFE29202CB90E75002C1823 /* XCRemoteSwiftPackageReference "Rainbow" */,
+				385F96972CB929B20053918A /* XCRemoteSwiftPackageReference "swift-log-console-colors" */,
 			);
 			productRefGroup = 07A649F92417E137003C6753 /* Products */;
 			projectDirPath = "";
@@ -591,7 +591,7 @@
 				07415FE524181D8800486885 /* SignUpView.swift in Sources */,
 				2FFE28FC2CB8FE1B002C1823 /* Constant.swift in Sources */,
 				07415FE9241832E700486885 /* TextFieldView.swift in Sources */,
-				2FFE29242CB90EB0002C1823 /* Logger.swift in Sources */,
+				2FFE29242CB90EB0002C1823 /* Log.swift in Sources */,
 				07442D11241C186100A235E7 /* RootView.swift in Sources */,
 				0750F70524900A9E004B1D32 /* RoundedButtonModifier.swift in Sources */,
 				07A649FE2417E137003C6753 /* SceneDelegate.swift in Sources */,
@@ -1324,12 +1324,12 @@
 				minimumVersion = 6.2.0;
 			};
 		};
-		2FFE29202CB90E75002C1823 /* XCRemoteSwiftPackageReference "Rainbow" */ = {
+		385F96972CB929B20053918A /* XCRemoteSwiftPackageReference "swift-log-console-colors" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Rainbow.git";
+			repositoryURL = "https://github.com/nneuberger1/swift-log-console-colors.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.1;
+				minimumVersion = 1.0.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1340,10 +1340,10 @@
 			package = 2FFE28EE2CB8DFF9002C1823 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		2FFE29212CB90E75002C1823 /* Rainbow */ = {
+		385F96982CB929B20053918A /* SwiftLogConsoleColors */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2FFE29202CB90E75002C1823 /* XCRemoteSwiftPackageReference "Rainbow" */;
-			productName = Rainbow;
+			package = 385F96972CB929B20053918A /* XCRemoteSwiftPackageReference "swift-log-console-colors" */;
+			productName = SwiftLogConsoleColors;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

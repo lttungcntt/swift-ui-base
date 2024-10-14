@@ -4,8 +4,6 @@
 <dict>
 	<key>API_URL</key>
 	<string>${API_URL}</string>
-    <key>ENVIRONMENT</key>
-    <string>${ENVIRONMENT}</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -25,7 +23,9 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>ConfigurationName</key>
-	<string>Debug</string>
+	<string>DEV</string>
+	<key>ENVIRONMENT</key>
+	<string>${ENVIRONMENT}</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

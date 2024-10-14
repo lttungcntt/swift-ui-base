@@ -12,6 +12,4 @@
 ENVIRONMENT = PRD
 PRODUCT_BUNDLE_IDENTIFIER = tyler.prd.name
 APP_NAME = APP(PRD)
-API_URL = https:$/$/www.apple.com/prd
-
-//GOOGLE_SERVICE_INFO_NAME = GoogleService-Info-DEV
+API_URL = https/$()/www.apple.com/prd

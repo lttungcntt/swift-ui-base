@@ -12,6 +12,6 @@
 ENVIRONMENT = PRG
 PRODUCT_BUNDLE_IDENTIFIER = tyler.prg.name
 APP_NAME = APP(PRG)
-API_URL = https://www.apple.com/prg
+API_URL = https:/$()/www.apple.com/prg
 
 //GOOGLE_SERVICE_INFO_NAME = GoogleService-Info-DEV

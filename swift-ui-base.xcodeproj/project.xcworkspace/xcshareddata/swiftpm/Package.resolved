@@ -1,5 +1,5 @@
 {
-  "originHash" : "fb1db3eed6ba582b448c0f3fed99a1654c251c9c36f2b3019d6c5a68a6df4b8a",
+  "originHash" : "8041b28a5a85095b153b64a756869963625eb328aea043661bc98d2db0072e06",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -11,12 +11,21 @@
       }
     },
     {
-      "identity" : "rainbow",
+      "identity" : "swift-log",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/onevcat/Rainbow.git",
+      "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "e0dada9cd44e3fa7ec3b867e49a8ddbf543e3df3",
-        "version" : "4.0.1"
+        "revision" : "9cb486020ebf03bfa5b5df985387a14a98744537",
+        "version" : "1.6.1"
+      }
+    },
+    {
+      "identity" : "swift-log-console-colors",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nneuberger1/swift-log-console-colors.git",
+      "state" : {
+        "revision" : "510bfc6ef5d656ea450497c4c2b50e0cd0240403",
+        "version" : "1.0.3"
       }
     },
     {
